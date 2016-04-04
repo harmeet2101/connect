@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/imgAssociate"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/thumbnail" />
+
+    <RelativeLayout
+        android:id="@+id/layoutMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/arrow"
+        android:background="@drawable/rounded_background_blue"
+        android:padding="10dp">
+
+        <com.tenpearls.android.components.TextView
+            android:id="@+id/txtMessage"
+            style="@style/message_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="10dp"
+            android:text="Sounds Good thanks"
+            android:textColor="@color/whiteBackground" />
+
+        <com.tenpearls.android.components.TextView
+            android:id="@+id/txtMessageDate"
+            style="@style/message_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/txtMessage"
+            android:layout_below="@+id/txtMessage"
+            android:text="2:30pm" />
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/imgAssociate"
+        android:src="@drawable/blue_arrow"
+        android:layout_marginEnd="8dp"
+         />
+
+
+</RelativeLayout>

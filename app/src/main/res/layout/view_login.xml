@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:background="@drawable/default_bg"
+    android:longClickable="false">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        >
+        <com.tenpearls.android.components.TextView
+            android:id="@+id/enterpriseUserError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enterpriseUser"
+            android:gravity="center_horizontal"
+            android:textColor="@color/red_button_selected"
+            android:textSize="17sp"
+            app:font_path_from_assets="@string/roboto_regular"
+            android:layout_alignParentTop="true"
+            android:visibility="invisible"
+            android:layout_centerHorizontal="true" />
+
+        <LinearLayout
+            android:id="@+id/layoutLogin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp">
+
+
+
+            <ImageView
+                android:id="@+id/imgMainLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="35dp"
+                android:src="@drawable/connect_logo"
+                android:longClickable="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false" />
+
+            <com.tenpearls.android.components.TextView
+                android:id="@+id/txtErrorMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/invalid_creds"
+                android:textColor="@color/red_button_selected"
+                android:textSize="15sp"
+                app:font_path_from_assets="@string/roboto_regular" />
+
+            <com.tenpearls.android.components.EditText
+                android:id="@+id/eTxtUserName"
+                style="@style/editTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/whiteBackground"
+                android:hint="@string/user_name"
+                android:inputType="textPassword"
+                android:textSize="18sp"
+                app:font_path_from_assets="@string/roboto_regular" />
+
+            <com.tenpearls.android.components.EditText
+                android:id="@+id/eTxtPassword"
+                style="@style/editTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/whiteBackground"
+                android:hint="@string/enter_password"
+                android:inputType="textPassword"
+                android:textSize="18sp"
+                app:font_path_from_assets="@string/roboto_regular" />
+
+
+            <com.tenpearls.android.components.Button
+                android:id="@+id/btnLogin"
+                style="@style/red_button"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/login"
+                android:textColor="@color/whiteBackground"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+        <com.tenpearls.android.components.Button
+            android:id="@+id/btnForgot"
+            style="@style/paragraph_text_small_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layoutLogin"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="40dp"
+            android:background="@color/md__transparent"
+            android:text="@string/forgot_password"
+            android:textAllCaps="false"
+            android:textColor="@color/grey_light"
+            android:textSize="15sp" />
+
+
+    </RelativeLayout>
+
+
+
+</ScrollView>

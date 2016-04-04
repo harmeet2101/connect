@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutItemMessageList"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteBackground">
+
+
+    <com.tenpearls.android.components.TextView
+        android:id="@+id/txtMessageSubject"
+        style="@style/text_subject_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:text="Mark Thompson" />
+
+
+    <com.tenpearls.android.components.TextView
+        android:id="@+id/txtMessageBody"
+        style="@style/paragraph_text_large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtMessageSubject"
+        android:layout_below="@+id/txtMessageSubject"
+        android:layout_marginTop="5dp"
+        android:layout_toStartOf="@+id/txtMessageDate"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="March 1st is good date"
+        android:textColor="@color/grey" />
+
+
+    <RelativeLayout
+        android:id="@+id/circleLayoutMessageNumber"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_above="@+id/txtMessageDate"
+        android:layout_alignEnd="@+id/txtMessageDate"
+        android:background="@drawable/blue_circle">
+
+        <com.tenpearls.android.components.TextView
+            android:id="@+id/txtMessageCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="11"
+            android:textColor="@color/whiteBackground"
+            android:textSize="12sp"
+            app:font_path_from_assets="@string/roboto_regular" />
+
+    </RelativeLayout>
+
+    <com.tenpearls.android.components.TextView
+        android:id="@+id/txtMessageDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtMessageBody"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="5dp"
+
+        android:gravity="right"
+        android:text="11:17 pm"
+        android:textColor="@color/grey"
+        android:textSize="14sp"
+        app:font_path_from_assets="@string/roboto_regular"
+
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_below="@+id/txtMessageDate"
+        android:layout_marginTop="10dp"
+        android:background="@color/grey_light" />
+
+</RelativeLayout>

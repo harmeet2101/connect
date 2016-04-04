@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="appirator_app_title" />
+    <string name="appirator_market_url" />
+
+    <integer name="appirator_days_until_prompt">7</integer>
+    <integer name="appirator_launches_until_prompt">3</integer>
+    <!-- Set this to 0 to remind every launch -->
+    <integer name="appirator_days_before_reminding">7</integer>
+    <!-- Change to true to show every time, for testing -->
+    <bool name="appirator_test_mode">true</bool>
+
+    <string name="rate_title">Rate %s</string>
+    <string name="rate_message">If you enjoy using %s, would you mind taking a moment to rate it? It won\'t take more than a minute. Thanks for your support!</string>
+    <string name="rate">Yes, Rate %s</string>
+    <string name="rate_later">Remind me later</string>
+    <string name="rate_cancel">No, Thanks</string>
+
+</resources>

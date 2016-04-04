@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/imgManager"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="2dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/thumbnail" />
+
+
+    <RelativeLayout
+        android:id="@+id/layoutMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/arrow"
+        android:background="@drawable/rounded_background_grey"
+        android:padding="10dp">
+
+
+        <com.tenpearls.android.components.TextView
+            android:id="@+id/txtMessage"
+            style="@style/message_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@color/md__transparent"
+            android:text="hif" />
+
+        <com.tenpearls.android.components.TextView
+            android:id="@+id/txtMessageDate"
+            style="@style/message_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/txtMessage"
+            android:layout_below="@+id/txtMessage"
+            android:background="@color/md__transparent"
+            android:text="2:30pm" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@+id/imgManager"
+        android:src="@drawable/grey_arrow" />
+
+
+</RelativeLayout>

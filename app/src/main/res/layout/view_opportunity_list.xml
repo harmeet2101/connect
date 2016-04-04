@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/default_bg"
+    >
+
+
+    <include
+        android:id="@+id/toolBarOpportunityList"
+        layout="@layout/toolbar_opportunity_list"/>
+
+    <EditText
+        android:id="@+id/etxtDumy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"/>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolBarOpportunityList">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/opportunityListRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/md__transparent"
+            android:isScrollContainer="false"
+            android:listSelector="@android:color/transparent"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <RelativeLayout
+        android:id="@+id/relLayoutHeaderMessage"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_below="@+id/toolBarOpportunityList"
+        android:background="#1BFFFFFF"
+        android:visibility="gone">
+
+        <com.tenpearls.android.components.TextView
+            android:id="@+id/txtHeaderMessage"
+            style="@style/header_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/header_text_one"
+            android:textColor="@android:color/white"/>
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/btnSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/md__transparent"
+        android:src="@drawable/floating_search_icon"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/imgFlashFavourite"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/flash_favorite_icon"
+        android:visibility="gone"/>
+
+</RelativeLayout>

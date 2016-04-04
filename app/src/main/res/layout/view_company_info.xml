@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/imgCompanyLogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:textColor="@color/text_color_dark_gray" />
+
+
+    <com.tenpearls.android.components.TextView
+        android:id="@+id/txtCompanyName"
+        style="@style/paragraph_text_large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgCompanyLogo"
+        android:layout_marginTop="10dp"
+        android:text="Medlmmune"
+        android:textColor="@color/text_color_dark_gray"
+        app:font_path_from_assets="@string/roboto_bold" />
+
+    <com.tenpearls.android.components.TextView
+        android:id="@+id/txtCompanyIndustry"
+        style="@style/paragraph_text_large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtCompanyName"
+        android:text="Software"
+        android:textColor="@color/text_color_dark_gray"
+        app:font_path_from_assets="@string/roboto_italic" />
+
+    <com.tenpearls.android.components.TextView
+        android:id="@+id/txtCompanyAddress"
+        style="@style/paragraph_text_large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtCompanyIndustry"
+        android:layout_marginTop="10dp"
+        android:text="Medlmmune"
+        android:textColor="@color/text_color_dark_gray" />
+
+
+    <com.tenpearls.android.components.TextView
+        android:id="@+id/txtZip"
+        style="@style/paragraph_text_large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtCompanyAddress"
+        android:layout_below="@+id/txtCompanyAddress"
+        android:text="35354654"
+        android:textColor="@color/text_color_dark_gray" />
+
+    <com.tenpearls.android.components.TextView
+        android:id="@+id/txtCompanyPhone"
+        style="@style/paragraph_text_large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtZip"
+        android:layout_marginBottom="20dp"
+        android:layout_alignStart="@+id/txtZip"
+        android:text="m: 35354654"
+        android:textColor="@color/text_color_dark_gray"
+        android:textSize="14sp" />
+
+<FrameLayout
+    android:layout_width="1dp"
+    android:layout_height="20dp"
+    android:layout_toRightOf="@id/txtCompanyPhone"
+    android:id="@+id/phoneBar"
+    android:background="@color/text_color_dark_gray"
+    android:layout_below="@+id/txtZip"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    ></FrameLayout>
+
+    <com.tenpearls.android.components.TextView
+        android:id="@+id/txtCompanyMobile"
+        style="@style/paragraph_text_large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtZip"
+        android:layout_marginBottom="20dp"
+        android:layout_toRightOf="@id/phoneBar"
+        android:text="h: 3345354654"
+        android:textColor="@color/text_color_dark_gray"
+        android:textSize="14sp" />
+
+</RelativeLayout>

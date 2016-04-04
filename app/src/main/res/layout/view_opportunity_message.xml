@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolBarMessage"
+        layout="@layout/toolbar_opportunity_simple" />
+
+    <RelativeLayout
+        android:id="@+id/layoutMessageHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolBarMessage"
+        android:padding="10dp">
+
+        <com.tenpearls.android.components.TextView
+            android:id="@+id/txtManagerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:font_path_from_assets="@string/roboto_bold" />
+
+        <View
+            android:id="@+id/seperator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/txtManagerName"
+            android:background="@color/grey_light" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/relLayoutEditor"
+        android:layout_below="@+id/layoutMessageHeader"
+        android:background="@color/md__transparent"
+        android:isScrollContainer="false"
+        android:listSelector="@android:color/transparent" />
+
+    <RelativeLayout
+        android:id="@+id/relLayoutEditor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/boardered_message_box"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/etxtMessageBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/txtSend"
+            android:background="@color/whiteBackground"
+            android:hint="@string/message_hint"
+            android:inputType="textMultiLine"
+            android:maxLength="200"
+            android:paddingBottom="5dp"
+            android:paddingStart="15dp"
+            android:paddingTop="5dp"
+            android:singleLine="false"
+            android:textSize="18sp" />
+
+        <com.tenpearls.android.components.TextView
+            android:id="@+id/txtSend"
+            style="@style/paragraph_text_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="Send"
+            android:textColor="@color/dark_grey" />
+    </RelativeLayout>
+</RelativeLayout>

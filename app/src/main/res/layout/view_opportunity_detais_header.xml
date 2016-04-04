@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/imgProfilePic"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-32dp"
+        android:layout_marginTop="20dp"
+        android:adjustViewBounds="true"
+        android:padding="1dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/thumbnail" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgProfilePic"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="40dp">
+
+        <com.mboconnect.components.ImageButton
+            android:id="@+id/btnMessage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_toLeftOf="@+id/btnEmail"
+            app:focusedDrawable="@drawable/message_header_icon_selected"
+            app:unFocusedDrawable="@drawable/message_header_icon" />
+
+        <com.mboconnect.components.ImageButton
+            android:id="@+id/btnEmail"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            app:focusedDrawable="@drawable/email_icon_selected"
+            app:unFocusedDrawable="@drawable/email_icon" />
+
+        <com.mboconnect.components.ImageButton
+            android:id="@+id/btnCall"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@+id/btnEmail"
+            app:focusedDrawable="@drawable/call_icon_selected"
+            app:unFocusedDrawable="@drawable/call_icon" />
+
+        <com.tenpearls.android.components.TextView
+            android:id="@+id/txtName"
+            style="@style/paragraph_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnCall"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Json Daimon"
+            android:textSize="21sp" />
+
+
+        <com.tenpearls.android.components.TextView
+            android:id="@+id/txtDesignation"
+            style="@style/paragraph_text_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtName"
+            android:layout_centerHorizontal="true"
+            android:text="Hiring Manager"
+            android:textSize="15sp" />
+
+
+        <com.tenpearls.android.components.Button
+            android:id="@+id/btnRespond"
+            style="@style/holo_red_button"
+            android:layout_below="@+id/txtDesignation"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/respond" />
+    </RelativeLayout>
+
+</RelativeLayout>

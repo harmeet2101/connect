@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="230dp"
+    android:layout_height="230dp"
+    android:layout_margin="10dp"
+    android:background="@drawable/action_dialog_bg"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <com.mboconnect.components.ImageButton
+        android:id="@+id/imgBtnEye"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        app:focusedDrawable="@drawable/eye_ac_icon_selected"
+        app:unFocusedDrawable="@drawable/eye_ac_icon_unselected" />
+
+
+    <com.mboconnect.components.ImageButton
+        android:id="@+id/imgBtnMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgBtnEye"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/imgBtnEye"
+        app:focusedDrawable="@drawable/message_ac_icon_unselected"
+        app:unFocusedDrawable="@drawable/message_ac_icon_unselected" />
+
+    <com.mboconnect.components.ImageButton
+        android:id="@+id/imgBtnFavourite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgBtnEye"
+        android:layout_marginTop="15dp"
+        app:focusedDrawable="@drawable/favourite_ac_icon_selected"
+        app:unFocusedDrawable="@drawable/favourite_ac_icon_unselected" />
+
+    <com.mboconnect.components.ImageButton
+        android:id="@+id/imgBtnTrash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgBtnFavourite"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        app:focusedDrawable="@drawable/trash_ac_icon_selected"
+        app:unFocusedDrawable="@drawable/trash_ac_icon_unselected" />
+</RelativeLayout>

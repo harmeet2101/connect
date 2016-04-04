@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:background="@android:color/white"
+    android:paddingBottom="20dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp" >
+
+    <com.tenpearls.android.components.TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/rate_title" />
+
+    <com.tenpearls.android.components.TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/rate"
+        android:layout_alignRight="@+id/rate"
+        android:layout_below="@id/title"
+        android:layout_marginTop="10dp"
+        android:text="@string/rate_message" />
+
+    <com.tenpearls.android.components.Button
+        android:id="@+id/rate"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/message"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/rate" />
+
+    <com.tenpearls.android.components.Button
+        android:id="@+id/rateLater"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rate"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="@string/rate_later" />
+
+</RelativeLayout>

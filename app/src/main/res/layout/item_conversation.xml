@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    android:paddingStart="10dp">
+
+    <ImageView
+        android:id="@+id/imgMessageIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/msgicon" />
+
+    <com.tenpearls.android.components.TextView
+        android:id="@+id/txtMsgTopic"
+        style="@style/job_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_toEndOf="@+id/imgMessageIcon"
+        android:text="You have been reviewed"
+        android:textSize="18sp"
+        android:textColor="@color/whiteBackground"
+        app:font_path_from_assets="@string/roboto_regular"/>
+
+    <com.tenpearls.android.components.TextView
+        android:id="@+id/txtRespondDate"
+        style="@style/paragraph_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtMsgTopic"
+        android:layout_below="@+id/txtMsgTopic"
+
+        android:text="Responded 05/15/15"
+        android:textColor="@color/whiteBackground"
+        android:textSize="15sp"
+        app:font_path_from_assets="@string/roboto_regular" />
+
+    <com.tenpearls.android.components.TextView
+        android:id="@+id/txtMsgCmpyName"
+        style="@style/paragraph_text_large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtMsgTopic"
+        android:layout_below="@+id/txtRespondDate"
+        android:text="Microsoft"
+        android:textSize="15sp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/whiteBackground"
+        app:font_path_from_assets="@string/roboto_regular"/>
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_alignStart="@+id/imgMessageIcon"
+        android:layout_below="@+id/txtMsgCmpyName"
+
+        android:background="@color/message_list_divider" />
+
+</RelativeLayout>

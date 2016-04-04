@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:id="@+id/settingsLayout"
+                android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbarSettings"
+        layout="@layout/toolbar_opportunity_simple"/>
+
+    <RelativeLayout
+        android:id="@+id/itemAbout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbarSettings">
+
+        <com.tenpearls.android.components.TextView
+            android:id="@+id/txtAbout"
+            style="@style/paragraph_text_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/about_us"
+            android:textColor="@color/grey"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/item_arrow"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/dividerOne"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/itemAbout"
+        android:background="@color/grey_light"/>
+
+    <RelativeLayout
+        android:id="@+id/itemProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dividerOne">
+
+        <com.tenpearls.android.components.TextView
+            android:id="@+id/txtProfile"
+            style="@style/paragraph_text_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/profile"
+            android:textColor="@color/grey"
+            android:textSize="16sp"
+            app:font_path_from_assets="@string/roboto_regular"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/item_arrow"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/dividerTwo"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/itemProfile"
+        android:background="@color/grey_light"/>
+
+    <RelativeLayout
+        android:id="@+id/itemTerms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dividerTwo">
+
+        <com.tenpearls.android.components.TextView
+            android:id="@+id/txtTerms"
+            style="@style/paragraph_text_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/terms_and_conditions"
+            android:textColor="@color/grey"
+            android:textSize="16sp"
+            app:font_path_from_assets="@string/roboto_regular"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/item_arrow"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/dividerThree"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/itemTerms"
+        android:background="@color/grey_light"/>
+
+    <RelativeLayout
+        android:id="@+id/itemPolicy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dividerThree">
+
+        <com.tenpearls.android.components.TextView
+            android:id="@+id/txtPolicy"
+            style="@style/paragraph_text_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/privacy_policy"
+            android:textColor="@color/grey"
+            android:textSize="16sp"
+            app:font_path_from_assets="@string/roboto_regular"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/item_arrow"/>
+    </RelativeLayout>
+
+</RelativeLayout>

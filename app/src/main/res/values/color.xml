@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="md__transparent">#00000000</color>
+    <color name="whiteBackground">#ffffff</color>
+    <color name="md_transparent_whiteBackground">#80ffffff</color>
+    <color name="md_transparent_80_percent_whiteBackground">#33ffffff</color>
+    <color name="md_transparent_60_percent_whiteBackground">#66ffffff</color>
+    <color name="md_transparent_grey_light">#80e0e0e0</color>
+    <color name="yellow">#e4ff00</color>
+    <color name="black">#ff000000</color>
+    <color name="md_transparent_black">#F2000000</color>
+    <color name="orange">#ff6600</color>
+    <color name="blue">#00fff9</color>
+    <color name="shaded_transparent">#80000000</color>
+    <color name="darkblue">#052f3f</color>
+    <color name="chatblue">#0072bb</color>
+    <color name="grey">#7e7e7e</color>
+    <color name="grey_light">#e0e0e0</color>
+    <color name="grey_transparent">#33ffffff</color>
+    <color name="recipient_background">#05295d</color>
+    <color name="splash_start">#660000</color>
+    <color name="orange_light">#ffe9bc</color>
+    <color name="button_orange_selected">#da6517</color>
+    <color name="error_red">#f80030</color>
+    <color name="credit_top_screen_background">#66339a</color>
+    <color name="credits_background">#f0f0f0</color>
+    <color name="menu_bar_background">#efefef</color>
+    <color name="text_color_light_gray">#9a9a9a</color>
+    <color name="tab_strike_color">#ad333e</color>
+    <color name="text_color_dark_gray">#808080</color>
+    <color name="red_button_unselected">#8d3c3f</color>
+    <color name="red_button_selected">#bc494e</color>
+    <color name="dark_grey">#363636</color>
+    <color name="green_button_unselected">#5e765c</color>
+    <color name="suggestion_list_divider">#464646</color>
+    <color name="message_list_divider">#2F3235</color>
+    <color name="md_transparent_40_percent_search_red">#99AC2822</color>
+    <color name="status_red">#9a3334</color>
+    <color name="status_green">#7fa57c</color>
+    <color name="status_grey">#a8a8a8</color>
+    <color name="status_blue">#567590</color>
+    <color name="blue_circle">#5698FB</color>
+
+</resources>

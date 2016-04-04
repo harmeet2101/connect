@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md__transparent"
+    android:paddingBottom="20dp"
+    android:paddingTop="20dp">
+
+    <com.tenpearls.android.components.TextView
+        android:id="@+id/txtGreetings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:gravity="center_vertical"
+        android:text="Good Afternoon"
+        android:textColor="@color/whiteBackground"
+        android:textSize="30sp"
+        app:font_path_from_assets="@string/roboto_thin" />
+
+    <com.tenpearls.android.components.TextView
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtGreetings"
+        android:layout_below="@+id/txtGreetings"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_toStartOf="@+id/imgThumbnail"
+        android:gravity="center_vertical"
+        android:text="Samantha K."
+        android:textColor="@color/whiteBackground"
+        android:textSize="27sp"
+        app:font_path_from_assets="@string/roboto_regular" />
+
+    <com.tenpearls.android.components.TextView
+        android:id="@+id/txtDesignation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtGreetings"
+        android:layout_below="@+id/txtName"
+        android:layout_marginTop="3dp"
+        android:layout_toStartOf="@+id/imgThumbnail"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="Supply Chain Manager"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:font_path_from_assets="@string/roboto_regular" />
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/imgThumbnail"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/txtGreetings"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/thumbnail" />
+
+    <LinearLayout
+        android:id="@+id/layoutMessages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtDesignation"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_toStartOf="@+id/imgThumbnail"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutCircle"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/circle"
+            android:textAlignment="center"
+            android:gravity="center_horizontal|center_vertical">
+
+            <TextSwitcher
+                android:id="@+id/txtMessageCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textAlignment="center"
+                android:text="0"
+                android:textColor="@color/whiteBackground"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <com.tenpearls.android.components.TextView
+            android:id="@+id/txtNewMessages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:gravity="center_vertical"
+            android:text="@string/new_messages"
+            android:textColor="@color/whiteBackground"
+            android:textSize="16sp"
+            app:font_path_from_assets="@string/roboto_thin" />
+
+    </LinearLayout>
+
+    <com.tenpearls.android.components.TextView
+        android:id="@+id/txtOpportunities"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtGreetings"
+        android:layout_below="@+id/layoutMessages"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/opportunities_caps"
+        android:textColor="@color/whiteBackground"
+        android:textSize="14sp"
+        app:font_path_from_assets="@string/roboto_regular" />
+
+
+    <LinearLayout
+        android:id="@+id/layoutStatus"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_alignStart="@+id/txtGreetings"
+        android:layout_below="@+id/txtOpportunities"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.tenpearls.android.components.EditText
+            android:id="@+id/eTxtHeaderSearch"
+            style="@style/editTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/whiteBackground"
+            android:gravity="center_vertical"
+            android:hint="@string/search"
+            android:inputType="textPassword"
+            android:textSize="18sp"
+            android:visibility="gone"
+            app:font_path_from_assets="@string/roboto_thin" />
+
+        <RelativeLayout
+            android:id="@+id/layoutTotal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="3dp"
+            android:layout_weight="0.3">
+
+            <RelativeLayout
+                android:id="@+id/allOpportunities"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/txtActiveTag"
+                android:background="@color/md_transparent_60_percent_whiteBackground">
+
+                <TextSwitcher
+                    android:id="@+id/txtAllNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="0"
+                    android:textColor="@color/whiteBackground"
+                    android:textSize="24sp" />
+
+            </RelativeLayout>
+
+            <com.tenpearls.android.components.TextView
+                android:id="@+id/txtActiveTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:text="@string/all"
+                android:textColor="@color/whiteBackground"
+                android:textSize="10sp"
+                app:font_path_from_assets="@string/roboto_regular" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutFavourite"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="3dp"
+            android:layout_marginStart="3dp"
+            android:layout_weight="0.3">
+
+            <RelativeLayout
+                android:id="@+id/favoriteOpportunities"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/txtNewTag"
+                android:background="@color/md_transparent_60_percent_whiteBackground">
+
+                <TextSwitcher
+                    android:id="@+id/txtFavouriteNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="0"
+                    android:textColor="@color/whiteBackground"
+                    android:textSize="24sp" />
+
+
+            </RelativeLayout>
+
+            <com.tenpearls.android.components.TextView
+                android:id="@+id/txtNewTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:text="@string/favourite"
+                android:textColor="@color/whiteBackground"
+                android:textSize="10sp"
+                app:font_path_from_assets="@string/roboto_regular" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutSearch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="3dp"
+            android:layout_weight="0.3">
+
+            <RelativeLayout
+                android:id="@+id/search_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/txtSearchTag"
+                android:background="@color/md_transparent_40_percent_search_red">
+
+                <ImageView
+                    android:id="@+id/job_list_header_search_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/search_box_icon2" />
+
+            </RelativeLayout>
+
+            <com.tenpearls.android.components.TextView
+                android:id="@+id/txtSearchTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:text="@string/search_tag"
+                android:textColor="@color/whiteBackground"
+                android:textSize="10sp"
+                app:font_path_from_assets="@string/roboto_regular" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

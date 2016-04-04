@@ -1,0 +1,169 @@
+<com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    app:leftEdgeSwipeOffset="0dp"
+    app:rightEdgeSwipeOffset="0dp">
+
+    <RelativeLayout
+        android:id="@+id/relLayoutSwipe"
+        android:layout_width="200dp"
+        android:layout_height="30dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/grey_light" />
+
+        <com.tenpearls.android.components.TextView
+            android:id="@+id/btnRespond"
+            style="@style/holo_red_button"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="0.5dp"
+            android:layout_marginTop="0.5dp"
+            android:layout_toLeftOf="@+id/btnDelete"
+            android:gravity="center"
+            android:text="@string/respond"
+            android:textSize="16sp" />
+
+        <com.mboconnect.components.ImageButton
+            android:id="@+id/btnDelete"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/grey"
+            android:padding="5dp"
+            app:focusedDrawable="@drawable/trash_icon_white"
+            app:unFocusedDrawable="@drawable/trash_icon_white" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/relLayoutHeaderDetail"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/grey_light"
+            android:paddingEnd="5dp"
+            android:paddingStart="25dp">
+
+            <com.tenpearls.android.components.TextView
+                android:id="@+id/txtLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="left|center_vertical"
+                android:singleLine="true"
+                android:layout_toLeftOf="@+id/txtStatus"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="7dp"
+                android:ellipsize="end"
+                android:text="@string/location"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                app:font_path_from_assets="@string/roboto_regular" />
+
+
+            <com.tenpearls.android.components.TextView
+                android:id="@+id/txtStatus"
+                style="@style/status_text"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@color/status_green"
+                android:gravity="center"
+                android:text="ACCEPTED"
+                android:textColor="@color/whiteBackground"
+                android:layout_marginRight="40dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+
+            <com.tenpearls.android.components.TextView
+                android:id="@+id/txtTimestamp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                android:gravity="center"
+                android:text="2 Hour"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                app:font_path_from_assets="@string/roboto_regular" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/layoutItemDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relLayoutHeaderDetail"
+            android:paddingBottom="5dp"
+            android:paddingEnd="20dp"
+            android:paddingStart="25dp"
+            android:paddingTop="5dp">
+
+            <com.tenpearls.android.components.TextView
+                android:id="@+id/txtOpportunityTitle"
+                style="@style/job_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Vendor Manager - Supply Chain"
+                app:font_path_from_assets="@string/roboto_bold" />
+
+
+            <com.tenpearls.android.components.TextView
+                android:id="@+id/txtCompanyName"
+                style="@style/paragraph_text_large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtOpportunityTitle"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="3dp"
+                android:gravity="bottom"
+                android:textSize="15sp"
+                android:text="Medlmmune"
+                android:textColor="@color/black"
+                app:font_path_from_assets="@string/roboto_regular" />
+
+            <ImageView
+                android:id="@+id/imgFavourite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/selected_favorite_icon" />
+
+            <com.tenpearls.android.components.TextView
+                android:id="@+id/txtDate"
+                style="@style/paragraph_text_large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtCompanyName"
+                android:text="Feb 26, 2015 - July 04, 2015"
+                android:textSize="15sp"
+                app:font_path_from_assets="@string/roboto_regular" />
+
+            <com.tenpearls.android.components.TextView
+                android:id="@+id/txtJobBudget"
+                style="@style/paragraph_text_large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtDate"
+                android:layout_marginTop="3dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="$100K - S110K"
+                android:textSize="40sp"
+                app:font_path_from_assets="@string/roboto_thin" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</com.daimajia.swipe.SwipeLayout>

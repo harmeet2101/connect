@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/default_bg">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/imgMainLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="35dp"
+            android:src="@drawable/connect_logo" />
+
+        <com.tenpearls.android.components.TextView
+            android:id="@+id/txtVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgMainLogo"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:text="1.0(15080301)"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:font_path_from_assets="@string/roboto_regular" />
+    </RelativeLayout>
+
+    <com.tenpearls.android.components.TextView
+        android:id="@+id/txtCopyRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text="@string/rights_reserved"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:font_path_from_assets="@string/roboto_regular" />
+</RelativeLayout>

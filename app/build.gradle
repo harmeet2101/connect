@@ -1,0 +1,89 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'android'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+apply plugin: 'testfairy'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        applicationId "com.mbopartners.MBOConnect"
+        minSdkVersion 19
+        targetSdkVersion 21
+        versionCode 15102101
+        versionName "1.0"
+    }
+    signingConfigs {
+        release {
+            //Path to your keystore file
+            storeFile file('/mboconnect.jks')
+            storePassword 'MB0P@rtner$'
+            keyAlias 'connectsigningkey'
+            keyPassword 'MB0P@rtner$'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+        }
+    }
+}
+
+
+android {
+    testfairyConfig {
+
+        apiKey "c3145a4e2d6c478b3f887001815f81e010dc2be3"
+        metrics "cpu,memory,network,logcat"
+        video "wifi"
+        videoRate "0.5"
+        videoQuality "low"
+        maxDuration "15m"
+        recordOnBackground true
+        iconWatermark false
+        notify false
+        maxDuration "1h"
+        autoUpdate false
+        uploadProguardMapping true
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+}
+
+dependencies {
+    compile 'com.android.support:recyclerview-v7:22.0.0'
+    compile 'com.android.support:appcompat-v7:22.2.1'
+    compile 'com.google.android.gms:play-services:6.5.87'
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(':framework')
+    compile 'joda-time:joda-time:2.7'
+    compile files('libs/artisan_library.jar')
+    compile 'com.daimajia.swipelayout:library:1.2.0@aar'
+    compile 'com.android.support:support-v4:22.2.1'
+    compile('com.crashlytics.sdk.android:crashlytics:2.5.2@aar') {
+        transitive = true;
+    }
+}

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imgFavourite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/txtJobDate"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/selected_favorite_icon" />
+
+    <com.tenpearls.android.components.TextView
+        android:id="@+id/txtOpportunityTitle"
+        style="@style/job_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Vendor Manager - Supply Chain" />
+
+
+    <LinearLayout
+        android:id="@+id/layoutCompanyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtOpportunityTitle"
+        android:layout_below="@+id/txtOpportunityTitle"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <com.tenpearls.android.components.TextView
+            android:id="@+id/txtRespondDate"
+            style="@style/paragraph_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:text="@string/company_caps"
+            android:textSize="11sp"
+            app:font_path_from_assets="@string/roboto_light" />
+
+        <com.tenpearls.android.components.TextView
+            android:id="@+id/txtCompanyName"
+            style="@style/paragraph_text_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:gravity="bottom"
+            android:text="Medlmmune"
+            app:font_path_from_assets="@string/roboto_bold" />
+    </LinearLayout>
+
+    <com.tenpearls.android.components.TextView
+        android:id="@+id/txtJobDate"
+        style="@style/paragraph_text_large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtOpportunityTitle"
+        android:layout_below="@+id/layoutCompanyName"
+        android:layout_marginTop="10dp"
+        android:text="Feb 26, 2015 - July 04, 2015"
+        android:textSize="16sp" />
+
+    <com.tenpearls.android.components.TextView
+        android:id="@+id/txtJobBudget"
+        style="@style/paragraph_text_large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtOpportunityTitle"
+        android:layout_below="@+id/layoutLocation"
+        android:layout_marginTop="10dp"
+        android:text="$100K - S110K"
+        android:textSize="38sp"
+        app:font_path_from_assets="@string/roboto_thin" />
+
+    <com.mboconnect.components.TabbedViewPager
+        android:id="@+id/pgrJobTabs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linLayoutBottomMenus"
+        android:layout_below="@+id/txtJobBudget"
+        android:layout_marginTop="15dp" />
+
+
+    <LinearLayout
+        android:id="@+id/linLayoutBottomMenus"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <com.mboconnect.components.ImageButton
+            android:id="@+id/imgBtnMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtJobDate"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/txtJobLocation"
+            android:layout_weight="1"
+            app:focusedDrawable="@drawable/message_icon"
+            app:unFocusedDrawable="@drawable/message_icon" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/text_color_light_gray" />
+
+        <com.mboconnect.components.ImageButton
+            android:id="@+id/imgBtnFavourite"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtJobDate"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/txtJobLocation"
+            android:layout_weight="1"
+            app:focusedDrawable="@drawable/favorite_icon"
+            app:unFocusedDrawable="@drawable/favorite_icon" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/text_color_light_gray" />
+
+        <com.mboconnect.components.ImageButton
+            android:id="@+id/imgBtnTrash"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtJobDate"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/txtJobLocation"
+            android:layout_weight="1"
+            app:focusedDrawable="@drawable/trash_icon"
+            app:unFocusedDrawable="@drawable/trash_icon" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/text_color_light_gray" />
+
+        <com.tenpearls.android.components.TextView
+            android:id="@+id/txtNext"
+            style="@style/paragraph_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txtMsgCmpyName"
+            android:layout_alignLeft="@+id/txtJobName"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/next_caps"
+            android:textColor="@color/text_color_dark_gray" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layoutLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtOpportunityTitle"
+        android:layout_below="@+id/txtJobDate"
+        android:layout_marginTop="10dp"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <com.tenpearls.android.components.TextView
+            android:id="@+id/txtJobLocation"
+            style="@style/paragraph_text_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="bottom"
+            android:text="MD, Gaithersburg"
+            android:textSize="15sp"
+            app:font_path_from_assets="@string/roboto_italic" />
+
+        <com.mboconnect.components.ImageButton
+            android:id="@+id/imgBtnLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="5dp"
+            android:gravity="bottom"
+            app:focusedDrawable="@drawable/location_icon"
+            app:unFocusedDrawable="@drawable/location_icon" />
+    </LinearLayout>
+
+    <com.mboconnect.components.ExpandablePanel
+        android:id="@+id/expandablePanel"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layoutLocation"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="15dp"
+        android:focusable="false"
+        android:orientation="vertical"
+        app:collapsedHeight="0dp"
+        app:content="@+id/relLayoutMap"
+        app:handle="@+id/imgBtnExpandPanel"
+        app:isviewgroup="true"
+        app:viewgroup="@+id/layoutPanel">
+
+        <RelativeLayout
+            android:id="@+id/relLayoutMap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/whiteBackground">
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/mapView"
+                android:layout_width="match_parent"
+                android:layout_height="294dp" />
+
+            <RelativeLayout
+                android:id="@+id/relLayoutMapDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/mapView"
+                android:layout_marginTop="-20dp"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp">
+
+                <com.tenpearls.android.components.TextView
+                    android:id="@+id/txtMapCompanyName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:background="@color/md__transparent"
+                    android:text="asdasdasd"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <com.tenpearls.android.components.TextView
+                    android:id="@+id/txtReview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtMapCompanyName"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/md__transparent"
+                    android:text="1 review"
+                    android:textColor="@color/grey"
+                    android:textSize="15sp" />
+
+                <ImageButton
+                    android:id="@+id/imgBtnDirection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/md__transparent"
+                    android:src="@drawable/direction_icon" />
+
+                <com.tenpearls.android.components.TextView
+                    android:id="@+id/txtDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/imgBtnDirection"
+                    android:layout_alignRight="@+id/imgBtnDirection"
+                    android:layout_below="@+id/imgBtnDirection"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/md__transparent"
+                    android:gravity="center"
+                    android:text="8 mins"
+                    android:textColor="@android:color/holo_blue_bright"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutPanel"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/message_drag_button_bg"
+            android:visibility="invisible">
+
+            <com.mboconnect.components.ImageButton
+                android:id="@+id/imgBtnExpandPanel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                app:focusedDrawable="@drawable/uparrow"
+                app:unFocusedDrawable="@drawable/uparrow" />
+        </RelativeLayout>
+
+    </com.mboconnect.components.ExpandablePanel>
+
+</RelativeLayout>

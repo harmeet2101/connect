@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="internet_not_found">No Internet Connection</string>
+    <string name="message_parallax_memory_error">Unable to load  background due to insufficient memory.</string>
+    <string name="application_font">fonts/Roboto-Regular.ttf</string>
+    <string name="application_font_condensed">fonts/Roboto-Regular.ttf</string>
+    <string name="bold_font">fonts/Roboto-Bold.ttf</string>
+    <string name="regular_font">fonts/Roboto-Regular.ttf</string>
+    <string name="thin_font">fonts/Roboto-Thin.ttf</string>
+    <string name="ok">OK</string>
+    <string name="cancel_caps">CANCEL</string>
+    <string name="cancel">Cancel</string>
+
+</resources>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ToolBarStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/navbg_withline">
+
+    <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/abc_action_bar_default_height_material"
+        android:id="@+id/opportunityRelativeLayout"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/imgToolbarIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/logo_marketplace" />
+
+        <ImageButton
+            android:id="@+id/btnBackToolBar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@color/md__transparent"
+            android:paddingEnd="8dp"
+            android:src="@drawable/back_icon"
+            android:visibility="visible" />
+
+        <com.tenpearls.android.components.TextView
+            android:id="@+id/txtMsgNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/btnBackToolBar"
+            android:gravity="center_vertical|start"
+            android:text="No. 2 of 6"
+            android:textColor="@color/whiteBackground"
+            android:textSize="16sp"
+            android:visibility="gone"
+            app:font_path_from_assets="@string/roboto_regular" />
+
+        <com.tenpearls.android.components.Button
+            android:id="@+id/btnRespond"
+            style="@style/actionbar_button"
+            android:layout_alignParentEnd="true"
+            android:text="@string/respond"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:visibility="visible"
+            android:layout_alignParentRight="false"
+            android:textAlignment="textEnd" />
+    </RelativeLayout>
+
+</android.support.v7.widget.Toolbar>
