@@ -14,7 +14,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            ext.betaDistributionGroupAliases='demo-testing'
+            ext.betaDistributionGroupAliases='connect_data'
         }
     }
 }
