@@ -149,8 +149,6 @@ public class StringEncrypter {
 		}
 		catch (UnsupportedEncodingException e) {
 		}
-		catch (IOException e) {
-		}
 		return null;
 	}
 }
