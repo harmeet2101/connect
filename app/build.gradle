@@ -42,9 +42,11 @@ android {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            ext.betaDistributionGroupAliases='demo-testing'
         }
         debug {
-            minifyEnabled false
+            minifyEnabled true
+            ext.betaDistributionGroupAliases='demo-testing'
         }
     }
 }

@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
@@ -399,7 +400,7 @@ public class LoginActivity extends ArtisanActivity {
     private void handleAccessTokenSuccessResponse(CustomHttpResponse response) {
 
         AccessToken token = (AccessToken) response.getResponse();
-        //Log.d("Access Token","This is my Refresh Token: "+ token);
+        Log.d("Access Token", "This is my Refresh Token: " + token.getAccessToken());
         DataModel.setAccessToken(token);
         //String refreshToken=DataModel.getRefreshToken();
         hideLoader();
