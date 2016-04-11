@@ -17,6 +17,9 @@ android {
             ext.betaDistributionGroupAliases='connect_data'
         }
     }
+    lintOptions {
+        abortOnError false
+    }
 }
 
 dependencies {
