@@ -43,11 +43,11 @@ android {
             shrinkResources true
             signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            ext.betaDistributionGroupAliases='connect_data'
+            ext.betaDistributionGroupAliases='connect-beta'
         }
         debug {
             minifyEnabled false
-            ext.betaDistributionGroupAliases='connect_data'
+            ext.betaDistributionGroupAliases='connect-beta'
         }
     }
     lintOptions {
