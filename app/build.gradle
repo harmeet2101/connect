@@ -36,6 +36,7 @@ android {
             keyAlias 'connectsigningkey'
             keyPassword 'MB0P@rtner$'
         }
+
     }
     buildTypes {
         release {
