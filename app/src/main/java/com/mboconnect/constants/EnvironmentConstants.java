@@ -7,7 +7,8 @@ public class EnvironmentConstants {
 
 
     private static final String	URL_MOBILE_LOCAL		   = "http://ec2-54-147-245-94.compute-1.amazonaws.com/api";
-    public static  String	URL_WEB_STAGGING		   = "http://ec2-54-224-3-44.compute-1.amazonaws.com/api/v1";
+    //public static  String	URL_WEB_STAGGING		   = "http://ec2-54-224-3-44.compute-1.amazonaws.com/api/v1";
+    public static  String	URL_WEB_STAGGING		   = "http://ec2-54-167-148-78.compute-1.amazonaws.com/api/v1";
     public static  String	URL_WEB_QA				   = "http://ec2-54-198-2-90.compute-1.amazonaws.com/api/v1";
     public static  String	URL_WEB_PROD			   = "https://api.connect.mbopartners.com/v1";
     public static  String   URL_WEB_DEMO               = "http://connect.demo.mbopartners.com/api/v1";
