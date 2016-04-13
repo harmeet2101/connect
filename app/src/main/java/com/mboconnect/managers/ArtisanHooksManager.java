@@ -26,7 +26,8 @@ public class ArtisanHooksManager {
     public static final String HOOK_DEMO_CLIENT_ID = "HOOK_DEMO_CLIENT_ID";
     public static final String HOOK_DEMO_FORGOT_PASSWORD = "HOOK_DEMO_FORGOT_PASSWORD";
 
-    public static final String DEFAULT_PRE_PROD_API_HOSTNAME = "http://ec2-54-224-3-44.compute-1.amazonaws.com/api/v1";
+    //public static final String DEFAULT_PRE_PROD_API_HOSTNAME = "http://ec2-54-224-3-44.compute-1.amazonaws.com/api/v1";
+    public static final String DEFAULT_PRE_PROD_API_HOSTNAME = "http://ec2-54-167-148-78.compute-1.amazonaws.com/api/v1";
     public static final String DEFAULT_PROD_API_HOSTNAME = "https://api.connect.mbopartners.com/v1";
     public static final String DEFAULT_PROD_AUTH_URL = "https://login.mbopartners.com/auth/realms/mobile/protocol/openid-connect/token";
     public static final String DEFAULT_PRE_PROD_LOGOUT_URL = "http://sso2-dev.mbopartners.com/auth/realms/dev/tokens/logout";

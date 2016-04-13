@@ -62,7 +62,7 @@ public class ConfigurationManager {
                 }
                 else if(position==1){
 
-                    EnvironmentConstants.URL_WEB_STAGGING=JsonUtility.getString(jb1,KeyConstants.KEY_API_HOSTNAME);
+                    //EnvironmentConstants.URL_WEB_STAGGING=JsonUtility.getString(jb1,KeyConstants.KEY_API_HOSTNAME);
                     EnvironmentConstants.SERVICE_BASE_URL = EnvironmentConstants.URL_WEB_STAGGING;
                 }
                 else{
