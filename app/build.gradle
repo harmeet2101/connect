@@ -28,15 +28,24 @@ android {
         versionCode 15102101
         versionName "1.0"
     }
-    signingConfigs {
+    /*signingConfigs {
         release {
             //Path to your keystore file
-            storeFile file('/mboconnect.jks')
+            storeFile file('../mboconnect.jks')
             storePassword 'MB0P@rtner$'
             keyAlias 'connectsigningkey'
             keyPassword 'MB0P@rtner$'
         }
 
+    }*/
+    signingConfigs {
+        release {
+            // this keystore is located at module level
+            storeFile file("../Android.jks")
+            storePassword "monu12345"
+            keyAlias "monu12345"
+            keyPassword "monu12345"
+        }
     }
     buildTypes {
         release {
