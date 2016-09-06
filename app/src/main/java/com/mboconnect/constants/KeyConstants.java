@@ -95,6 +95,7 @@ public class KeyConstants {
 	public static final String KEY_LOGOUT_URL			= "logoutURL";
 	public static final String KEY_API_HOSTNAME			= "apiHostname";
 	public static final String KEY_CLIENT_ID			= "clientID";
+	public static final String KEY_CLIENT_SECRET		= "clientSecret";
 	public static final String KEY_FORGOT_PASSWORD      = "forgetPassword";
 	public static final String KEY_TERMS_AND_CONDITIONS = "termsAndConditions";
 	public static final String KEY_PRIVACY_POLICY		= "privacyPolicy";

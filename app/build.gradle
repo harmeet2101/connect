@@ -25,26 +25,19 @@ android {
         applicationId "com.mbopartners.MBOConnect"
         minSdkVersion 19
         targetSdkVersion 21
-        versionCode 15102101
-        versionName "1.0"
+        versionCode 16060801
+        versionName "1.2"
     }
-    /*signingConfigs {
+    lintOptions {
+        abortOnError false
+    }
+    signingConfigs {
         release {
             //Path to your keystore file
             storeFile file('../mboconnect.jks')
             storePassword 'MB0P@rtner$'
             keyAlias 'connectsigningkey'
             keyPassword 'MB0P@rtner$'
-        }
-
-    }*/
-    signingConfigs {
-        release {
-            // this keystore is located at module level
-            storeFile file("../Android.jks")
-            storePassword "monu12345"
-            keyAlias "monu12345"
-            keyPassword "monu12345"
         }
     }
     buildTypes {
@@ -60,7 +53,7 @@ android {
             ext.betaDistributionGroupAliases='connect-beta'
         }
     }
-    lintOptions {
+    lintOptions{
         abortOnError false
     }
 }
@@ -99,7 +92,7 @@ dependencies {
     compile files('libs/artisan_library.jar')
     compile 'com.daimajia.swipelayout:library:1.2.0@aar'
     compile 'com.android.support:support-v4:22.2.1'
-    compile('com.crashlytics.sdk.android:crashlytics:2.5.2@aar') {
+    compile('com.crashlytics.sdk.android:crashlytics:2.5.5@aar') {
         transitive = true;
     }
 }

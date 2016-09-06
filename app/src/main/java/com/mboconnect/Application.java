@@ -38,6 +38,7 @@ public class Application extends ArtisanApplication {
             }
         }, 3*1000);
 
+
     }
 
     @Override

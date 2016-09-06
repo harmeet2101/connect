@@ -64,7 +64,6 @@ public class AccessTokenService extends BaseService {
 	private ArrayList<BasicNameValuePair> getParams (String username, String password) {
 
 		ArrayList<BasicNameValuePair> params = new ArrayList<BasicNameValuePair> ();
-		params.add (new BasicNameValuePair ("client_id", Utils.decodeFromBase64 (EnvironmentConstants.CLIENT_ID)));
 		params.add(new BasicNameValuePair("username", username));
 		params.add (new BasicNameValuePair("password", password));
 		params.add(new BasicNameValuePair("grant_type", "password"));

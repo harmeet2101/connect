@@ -8,7 +8,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
@@ -31,7 +30,6 @@ import com.mboconnect.listeners.APIResponseListner;
 import com.mboconnect.managers.ConfigurationManager;
 import com.mboconnect.model.DataModel;
 import com.mboconnect.services.ServiceFactory;
-import com.mboconnect.utils.Utils;
 import com.mboconnect.views.BaseView;
 import com.mboconnect.views.LoginView;
 import com.tenpearls.android.components.Loader;
@@ -248,7 +246,7 @@ public class LoginActivity extends ArtisanActivity {
                         }
 
                         PreferenceUtility.setInteger(context, "environmentPosition", position);
-                       ConfigurationManager.getInstance().loadConfigs();
+                        ConfigurationManager.getInstance().loadConfigs();
                         service = new ServiceFactory(context);
                     }
                 })
@@ -304,14 +302,18 @@ public class LoginActivity extends ArtisanActivity {
 
     private void setupUI() {
 
-        if (DataModel.getLoginCounter() < 3) {
+        ((LoginView) view).enableLogin();
 
-            ((LoginView) view).enableLogin();
-        } else {
+// Removed the lockout
 
-            Utils.setLoginAlarm(LoginActivity.this);
-            ((LoginView) view).disableLogin();
-        }
+//        if (DataModel.getLoginCounter() < 3) {
+//
+//            ((LoginView) view).enableLogin();
+//        } else {
+//
+//            Utils.setLoginAlarm(LoginActivity.this);
+//            ((LoginView) view).disableLogin();
+//        }
     }
 
     @Override
@@ -380,12 +382,12 @@ public class LoginActivity extends ArtisanActivity {
         }
 
         if (isRoleEnterprise) {
-           // Toast.makeText(context, "No Enterprise User allowed", Toast.LENGTH_SHORT).show();
+            // Toast.makeText(context, "No Enterprise User allowed", Toast.LENGTH_SHORT).show();
             DataModel.setLoginCounter(DataModel.getLoginCounter() + 1);
             setupUI();
             ((LoginView) view).showErrorMessage();
             DataModel.setAccessToken(null);
-            isRoleEnterprise=false;
+            isRoleEnterprise = false;
         } else {
             startJobListActivity();
         }
@@ -400,7 +402,7 @@ public class LoginActivity extends ArtisanActivity {
     private void handleAccessTokenSuccessResponse(CustomHttpResponse response) {
 
         AccessToken token = (AccessToken) response.getResponse();
-        Log.d("Access Token", "This is my Refresh Token: " + token.getAccessToken());
+        //Log.d("Access Token","This is my Refresh Token: "+ token);
         DataModel.setAccessToken(token);
         //String refreshToken=DataModel.getRefreshToken();
         hideLoader();

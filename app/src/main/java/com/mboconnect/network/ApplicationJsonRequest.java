@@ -10,11 +10,13 @@ import com.android.volley.VolleyError;
 import com.mboconnect.Application;
 import com.mboconnect.activities.LoginActivity;
 import com.mboconnect.constants.EnvironmentConstants;
+import com.mboconnect.constants.KeyConstants;
 import com.mboconnect.constants.ServiceConstants;
 import com.mboconnect.entities.AccessToken;
 import com.mboconnect.listeners.APIResponseListner;
 import com.mboconnect.model.DataModel;
 import com.mboconnect.services.AccessTokenService;
+import com.tenpearls.android.managers.ConfigurationManager;
 import com.tenpearls.android.network.CustomHttpResponse;
 import com.tenpearls.android.network.JsonRequest;
 import com.tenpearls.android.network.VolleyManager;
@@ -55,15 +57,14 @@ public class ApplicationJsonRequest extends JsonRequest implements Cloneable {
 		Map<String, String> headers = new HashMap<String, String> ();
 
 		if (url.equals (EnvironmentConstants.SERVICE_ACCESS_TOKEN_URL)) {
-
+			headers.put("Authorization","Basic " + EnvironmentConstants.CLIENT_ID + EnvironmentConstants.CLIENT_SECRET);
 			return headers;
 		}
-		headers.put ("Accept-Encoding", "gzip");
-		headers.put ("User-Agent", "gzip");
-		headers.put ("Cache-Control", "no-cache, no-store, must-revalidate");
-		headers.put ("Authorization", "Bearer " + accessToken);
-		headers.put ("MBO-REALM", "mobile");
-
+		headers.put("Accept-Encoding", "gzip");
+		headers.put("User-Agent", "gzip");
+		headers.put("Cache-Control", "no-cache, no-store, must-revalidate");
+		headers.put("Authorization", "Bearer " + accessToken);
+		headers.put("MBO-REALM", "mobile");
 		return headers;
 	}
 

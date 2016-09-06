@@ -21,6 +21,7 @@ public class EnvironmentConstants {
     public static String	URL_TERMS_CONDITION		   = "https://www.mbopartners.com/terms-and-conditions";
     public static String	URL_PRIVACY_POLICY		   = "https://www.mbopartners.com/privacy-policy";
     public static final String	ARTISAN_APP_ID			   = "55c51056369f8431b6000001";
+    public static String    CLIENT_SECRET              = "4eb69d74-b9ac-4052-acef-f5884bc8fd2e";
 
 
 

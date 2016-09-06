@@ -31,7 +31,7 @@ public class ArtisanHooksManager {
     public static final String DEFAULT_PROD_API_HOSTNAME = "https://api.connect.mbopartners.com/v1";
     public static final String DEFAULT_PROD_AUTH_URL = "https://login.mbopartners.com/auth/realms/mobile/protocol/openid-connect/token";
     public static final String DEFAULT_PRE_PROD_LOGOUT_URL = "http://sso2-dev.mbopartners.com/auth/realms/dev/tokens/logout";
-    public static final String DEFAULT_PRE_PROD_CLIENT_ID = "Y29ubmVjdC13ZWI=";
+    public static final String DEFAULT_PRE_PROD_CLIENT_ID = "Y29ubmVjdC13ZWI6";
     public static final String DEFAULT_PRE_PROD_AUTH_URL = "http://sso2-dev.mbopartners.com/auth/realms/dev/protocol/openid-connect/token";
     public static final String DEFAULT_PROD_CLIENT_ID = "Y29ubmVjdC1tb2JpbGU=";
     public static final String DEFAULT_PROD_LOGOUT_URL = "https://login.mbopartners.com/auth/realms/mobile/tokens/logout";
@@ -42,7 +42,7 @@ public class ArtisanHooksManager {
     public static final String DEFAULT_DEMO_API_HOSTNAME = "http://connect.demo.mbopartners.com/api/v1";
     public static final String DEFAULT_DEMO_AUTH_URL = "http://sso2-dev.mbopartners.com/auth/realms/dev/protocol/openid-connect/token";
     public static final String DEFAULT_DEMO_LOGOUT_URL = "http://sso2-dev.mbopartners.com/auth/realms/dev/tokens/logout";
-    public static final String DEFAULT_DEMO_CLIENT_ID = "Y29ubmVjdC13ZWI=";
+    public static final String DEFAULT_DEMO_CLIENT_ID = "Y29ubmVjdC13ZWI6";
     public static final String DEFAULT_DEMO_FORGOT_PASSWORD = "https://sso2-dev.mbopartners.com/auth/realms/dev/login-actions/password-reset";
 
 
@@ -65,7 +65,6 @@ public class ArtisanHooksManager {
         PowerHookManager.registerVariable(HOOK_DEMO_LOGOUT_URL,"Demo logout url",DEFAULT_DEMO_LOGOUT_URL);
         PowerHookManager.registerVariable(HOOK_DEMO_CLIENT_ID,"Demo client id",DEFAULT_DEMO_CLIENT_ID);
         PowerHookManager.registerVariable(HOOK_DEMO_FORGOT_PASSWORD,"Demo forgot password",DEFAULT_DEMO_FORGOT_PASSWORD);
-
     }
 
     public static String getHookForKeyWithDefaultValue(String key, String defaultValue) {

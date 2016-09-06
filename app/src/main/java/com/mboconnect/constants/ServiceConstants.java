@@ -19,7 +19,10 @@ public class ServiceConstants {
 	public static String    SERVICE_SEARCH                      = "/opportunities?query=";
 	public static String    SERVICE_DELETE_HIDE_OPPORTUNITY     = "/hidden/%s";
 	public static String    SERVICE_IMAGE                       = EnvironmentConstants.SERVICE_BASE_URL + "/r?i=";
-
+	public static String	PRODUCTION_CLIENT_SECRET			= "NGViNjlkNzQtYjlhYy00MDUyLWFjZWYtZjU4ODRiYzhmZDJl";
+	public static String	PRE_PROD_CLIENT_SECRET				= "OGVjYTdmNmQtY2I2Yi00MTNmLThkZjctOTA0MTRjY2M3MmYz";
+	public static String	PRODUCTION_CLIENT_ID				= "Y29ubmVjdC1tb2JpbGU6";
+	public static String	PRE_PROD_CLIENT_ID					= "Y29ubmVjdC13ZWI6";
 
 
 }

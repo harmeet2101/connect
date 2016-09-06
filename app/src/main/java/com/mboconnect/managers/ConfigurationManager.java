@@ -5,6 +5,7 @@ import com.google.gson.JsonObject;
 import com.mboconnect.Application;
 import com.mboconnect.constants.EnvironmentConstants;
 import com.mboconnect.constants.KeyConstants;
+import com.mboconnect.constants.ServiceConstants;
 import com.mboconnect.helpers.FillingHelper;
 import com.tenpearls.android.utilities.JsonUtility;
 import com.tenpearls.android.utilities.PreferenceUtility;
@@ -55,17 +56,21 @@ public class ConfigurationManager {
 
                 JsonObject jb1 = jsonArray.get(position).getAsJsonObject();
 
-                    EnvironmentConstants.CLIENT_ID = JsonUtility.getString(jb1, KeyConstants.KEY_CLIENT_ID);
                 if(position==0){
                     EnvironmentConstants.URL_WEB_PROD=JsonUtility.getString(jb1,KeyConstants.KEY_API_HOSTNAME);
                     EnvironmentConstants.SERVICE_BASE_URL = EnvironmentConstants.URL_WEB_PROD;
+                    EnvironmentConstants.CLIENT_ID = ServiceConstants.PRODUCTION_CLIENT_ID;
+                    EnvironmentConstants.CLIENT_SECRET = ServiceConstants.PRODUCTION_CLIENT_SECRET;
                 }
                 else if(position==1){
-
-                    //EnvironmentConstants.URL_WEB_STAGGING=JsonUtility.getString(jb1,KeyConstants.KEY_API_HOSTNAME);
+                    EnvironmentConstants.CLIENT_ID = ServiceConstants.PRE_PROD_CLIENT_ID;
+                    EnvironmentConstants.CLIENT_SECRET = ServiceConstants.PRE_PROD_CLIENT_SECRET;
+//                    EnvironmentConstants.URL_WEB_STAGGING=JsonUtility.getString(jb1,KeyConstants.KEY_API_HOSTNAME);
                     EnvironmentConstants.SERVICE_BASE_URL = EnvironmentConstants.URL_WEB_STAGGING;
                 }
                 else{
+                    EnvironmentConstants.CLIENT_ID = ServiceConstants.PRE_PROD_CLIENT_ID;
+                    EnvironmentConstants.CLIENT_SECRET = ServiceConstants.PRE_PROD_CLIENT_SECRET;
                     EnvironmentConstants.URL_WEB_DEMO=JsonUtility.getString(jb1,KeyConstants.KEY_API_HOSTNAME);
                     EnvironmentConstants.SERVICE_BASE_URL = EnvironmentConstants.URL_WEB_DEMO;
                 }
